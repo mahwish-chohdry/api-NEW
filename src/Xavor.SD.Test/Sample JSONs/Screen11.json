@@ -1,0 +1,73 @@
+//GetDevices/{customerId}/{AdminUserId}/all
+//GetDevices/LG/mamir/all
+//Screen11 - all groups and all devices without user association
+
+//deviceStatus should be null in response for all devices
+//Response
+{
+  "deviceGroupList": [
+    {
+      "fullGroupAccess": false,
+      "groupId": "GUID",
+      "groupName": "Lab1",
+      "deviceList": [
+        {
+          "deviceId": "Fan1",
+          "deviceName": "Fan 1",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan2",
+          "deviceName": "Fan 2",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan3",
+          "deviceName": "Fan 3",
+          "onBoard": true,
+          "hasPermission": false
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID",
+      "groupName": "Wrokshop",
+      "deviceList": [
+        {
+          "deviceId": "Fan4",
+          "deviceName": "Fan 4",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan5",
+          "deviceName": "Fan 5",
+          "onBoard": true,
+          "hasPermission": false
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": false,
+      "groupId": "GUID",
+      "groupName": "UNGROUPED",
+      "devIiceList": [
+        {
+          "deviceId": "Fan6",
+          "deviceName": "Fan 6",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan7",
+          "deviceName": "Fan 7",
+          "onBoard": true,
+          "hasPermission": false
+        }
+      ]
+    }
+  ]
+}

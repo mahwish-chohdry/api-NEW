@@ -1,0 +1,159 @@
+//GetDevices/{customerId}/{AdminUserId}
+//GetDevices/LG/mamir
+//Screen3
+//Screen4
+//Screen7
+
+//Response
+{
+  "userId": "mamir", //admin user
+  "deviceGroupList": [
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID",
+      "groupName": "Lab1",
+      "deviceList": [
+        {
+          "deviceId": "Fan1",
+          "deviceName": "Fan 1",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        },
+        {
+          "deviceId": "Fan2",
+          "deviceName": "Fan 2",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        },
+        {
+          "deviceId": "Fan3",
+          "deviceName": "Fan 3",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID",
+      "groupName": "Wrokshop",
+      "deviceList": [
+        {
+          "deviceId": "Fan4",
+          "deviceName": "Fan 4",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        },
+        {
+          "deviceId": "Fan5",
+          "deviceName": "Fan 5",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID",
+      "groupName": "UNGROUPED",
+      "deviceList": [
+        {
+          "deviceId": "Fan6",
+          "deviceName": "Fan 6",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        },
+        {
+          "deviceId": "Fan7",
+          "deviceName": "Fan 7",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "connectivityStatus": "ONLINE-OFFLINE-IDLE",
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID", //core group that cloud should send separately, on-shelf fans not connected to cloud
+      "groupName": "OFFBOARD",
+      "deviceList": [
+        {
+          "deviceId": "FanX",
+          "deviceName": "Fan X",
+          "onBoard": false,
+          "hasPermission": true,
+          "deviceStatus": null
+        },
+        {
+          "deviceId": "FanY",
+          "deviceName": "Fan Y",
+          "onBoard": false,
+          "hasPermission": true,
+          "deviceStatus": null
+        }
+      ]
+    }
+  ]
+}

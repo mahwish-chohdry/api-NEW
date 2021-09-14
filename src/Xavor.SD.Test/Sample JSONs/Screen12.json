@@ -1,0 +1,22 @@
+//GetDevices/{customerId}/{AdminUserId}/users
+//GetDevices/LG/mamir/users
+//Screen12 - total number of devices grouped by operator
+
+//Response
+[
+  {
+    "userId": "john", //user
+    "userName": "john Woods",
+    "totaldevices": 5,
+    "profilePicture": "aaa.jpg"
+  },
+  {
+    "userId": "chris", //user
+    "userName": "Chris Haris",
+    "totaldevices": 3,
+    "profilePicture": "bbb.jpg"
+  }
+]
+
+
+

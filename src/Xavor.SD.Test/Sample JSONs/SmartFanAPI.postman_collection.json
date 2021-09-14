@@ -1,0 +1,699 @@
+{
+	"info": {
+		"_postman_id": "47755164-6322-4dd5-ada6-48d78b993670",
+		"name": "SmartFanAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Screen3-4-7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUyMTgwNCwiZXhwIjoxNTY3NjA4MjA0LCJpYXQiOjE1Njc1MjE4MDR9.rn3rJKSSIZ4zVoQgYeIGIWo6OJ1S3IIoCFT-FYhRlws",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen6-CreateGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": \"admin1@xavor.com\",\r\n\"deviceGroupList\": [\r\n  {\r\n    \"groupName\": \"Workshop\",\r\n    \"deviceList\": [\r\n      {\r\n        \"deviceId\": \"Fan3ID\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/DeviceGroup/SaveGroup/xavor1/admin1/",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"DeviceGroup",
+						"SaveGroup",
+						"xavor1",
+						"admin1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen11-CreateOperator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUyNTM0NywiZXhwIjoxNTY3NjExNzQ3LCJpYXQiOjE1Njc1MjUzNDd9.1YdST0vFjq3KAeMuotOsZmT8ITzdV-LRQmlBiuTKhbo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userId\": \"jack@wick.com\",\r\n   \"userName\": \"jack wick\",\r\n   \"deviceGroupList\": [\r\n       {\r\n       \t   \"groupId\": \"Lab\",\r\n           \"deviceList\": [\r\n               {\r\n                   \"deviceId\": \"Fan1ID\",\r\n                   \"hasPermission\": true\r\n               },\r\n               {\r\n                   \"deviceId\": \"Fan2ID\",\r\n                   \"hasPermission\": true\r\n               }\r\n           ]\r\n       },\r\n       {\r\n           \"groupId\": \"UNGROUPED\",\r\n           \"deviceList\": [\r\n               {\r\n                   \"deviceId\": \"14\",\r\n                   \"hasPermission\": false\r\n               },\r\n               {\r\n                   \"deviceId\": \"13\",\r\n                   \"hasPermission\": false\r\n               }\r\n           ]\r\n       }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/SaveUserDevices/xavor1/admin1@xavor.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"SaveUserDevices",
+						"xavor1",
+						"admin1@xavor.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen14-UpdateOperator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUyNTM0NywiZXhwIjoxNTY3NjExNzQ3LCJpYXQiOjE1Njc1MjUzNDd9.1YdST0vFjq3KAeMuotOsZmT8ITzdV-LRQmlBiuTKhbo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userId\": \"john@wick.com\",\r\n   \"userName\": \"john wick\",\r\n   \"userEmail\": \"john@wick.com\",\r\n   \"deviceGroupList\": [\r\n       {\r\n       \t   \"groupId\": \"Lab\",\r\n           \"deviceList\": [\r\n               {\r\n                   \"deviceId\": \"Fan1ID\",\r\n                   \"hasPermission\": false\r\n               },\r\n                {\r\n                   \"deviceId\": \"Fan2ID\",\r\n                   \"hasPermission\": true\r\n               }\r\n           ]\r\n       },\r\n       {\r\n           \"groupId\": \"UNGROUPED\",\r\n           \"deviceList\": [\r\n               {\r\n                   \"deviceId\": \"14\",\r\n                   \"hasPermission\": true\r\n               },\r\n               {\r\n                   \"deviceId\": \"13\",\r\n                   \"hasPermission\": false\r\n               }\r\n           ]\r\n       }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/SaveUserDevices/xavor1/admin1@xavor.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"SaveUserDevices",
+						"xavor1",
+						"admin1@xavor.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/group/25d6c6ea-7693-44a8-bac6-89b20d733a06",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"group",
+						"25d6c6ea-7693-44a8-bac6-89b20d733a06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/group/",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"group",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen11",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/all",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen12",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/users",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen13-14",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/jack@wick.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"jack@wick.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen8-UpdateGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": \"admin1@xavor.com\",\r\n\"deviceGroupList\": [\r\n  {\r\n    \"groupName\": \"Lab\",\r\n    \"deviceList\": [\r\n      {\r\n        \"deviceId\": \"Fan2ID\"\r\n      },\r\n      {\r\n        \"deviceId\": \"Fan1ID\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/DeviceGroup/SaveGroup/xavor1/admin1@xavor.com/25d6c6ea-7693-44a8-bac6-89b20d733a06",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"DeviceGroup",
+						"SaveGroup",
+						"xavor1",
+						"admin1@xavor.com",
+						"25d6c6ea-7693-44a8-bac6-89b20d733a06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen6-Save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUxODAxNiwiZXhwIjoxNTY3NjA0NDE2LCJpYXQiOjE1Njc1MTgwMTZ9.oCzLew-eN1jS1CiAnHiOFzYnrs6vQhuZkA72JSIak5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\": \"admin1@xavor.com\",\r\n\"deviceGroupList\": [\r\n  {\r\n    \"groupName\": \"Lab\",\r\n    \"deviceList\": [\r\n      {\r\n        \"deviceId\": \"Fan2ID\"\r\n      },\r\n      {\r\n        \"deviceId\": \"Fan1ID\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/DeviceGroup/SaveGroup/xavor1/admin1@xavor.com/25d6c6ea-7693-44a8-bac6-89b20d733a06",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"DeviceGroup",
+						"SaveGroup",
+						"xavor1",
+						"admin1@xavor.com",
+						"25d6c6ea-7693-44a8-bac6-89b20d733a06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@xavor.com\",\r\n  \"password\": \"121212\",\r\n  \"deviceType\": \"Android\",\r\n  \"deviceIdentifier\": \"165165487464\"\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Authorization/SignIn",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Authorization",
+						"SignIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"mjillani@xavor.com\",\r\n  \"currentPassword\": \"password\",\r\n  \"newPassword\": \"password\"\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Authorization/ResetPassword",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Authorization",
+						"ResetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"mjillani@xavor.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Authorization/ForgotPassword",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Authorization",
+						"ForgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operator Screen 1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzYwNjM4NiwiZXhwIjoxNTY3NjkyNzg2LCJpYXQiOjE1Njc2MDYzODZ9.VF9zQ77Up47t4MxZkxA6A0JO6RuttDpkrO0sNkEG_IQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/GetDevices/xavor1/admin1@xavor.com/operator/john@wick.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"GetDevices",
+						"xavor1",
+						"admin1@xavor.com",
+						"operator",
+						"john@wick.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen 14 - UpdateOperator-Latest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQHhhdm9yLmNvbSIsIm5iZiI6MTU2NzUyNTM0NywiZXhwIjoxNTY3NjExNzQ3LCJpYXQiOjE1Njc1MjUzNDd9.1YdST0vFjq3KAeMuotOsZmT8ITzdV-LRQmlBiuTKhbo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"userId\": \"jack@wqick.com\",\r\n   \"userName\": \"jack wick\",\r\n   \"deviceGroupList\": [\r\n       {\r\n       \t   \"groupId\": \"c131a020-b6d0-47aa-b01a-1035e7ea5382\",\r\n           \"deviceList\": [\r\n               {\r\n                   \"deviceId\": \"Fan3ID\",\r\n                   \"hasPermission\": true\r\n               }\r\n              \r\n           ]\r\n       },\r\n       {\r\n           \"groupId\": \"UNGROUPED\",\r\n           \"deviceList\": [\r\n               \r\n               {\r\n                   \"deviceId\": \"123\",\r\n                   \"hasPermission\": false\r\n               }\r\n           ]\r\n       }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Device/UpdateUserDevices/xavor1/admin1@xavor.com",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Device",
+						"UpdateUserDevices",
+						"xavor1",
+						"admin1@xavor.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Configurations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUB4YXZvci5jb20iLCJuYmYiOjE1Njc3NTYxMjUsImV4cCI6MTU2Nzg0MjUyNSwiaWF0IjoxNTY3NzU2MTI1fQ.q-uN7-A15IT7L8I_XbymhRSZcRCVpX-6QCM2me70Hzw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://xavorsdapi.xavor.com:5065/api/Customer/GetConfiguration/xavor1",
+					"protocol": "http",
+					"host": [
+						"xavorsdapi",
+						"xavor",
+						"com"
+					],
+					"port": "5065",
+					"path": [
+						"api",
+						"Customer",
+						"GetConfiguration",
+						"xavor1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

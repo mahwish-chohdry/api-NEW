@@ -1,0 +1,26 @@
+//SaveGroup/{customerId}/{AdminUserId}/        -- add new group
+//SaveGroup/{customerId}/{AdminUserId}/{groupId} -- update existing group
+//SaveGroup/LG/mamir/Lab
+//Screen6
+//Screen8
+
+//Request
+{
+  "deviceGroupList": [
+    {
+      "groupId": "GUID", //only added devices
+      "groupName": "Lab1", //only added devices
+      "deviceList": [
+        {
+          "deviceId": "Fan1"
+        },
+        {
+          "deviceId": "Fan2"
+        },
+        {
+          "deviceId": "Fan3"
+        }
+      ]
+    }
+  ]
+}

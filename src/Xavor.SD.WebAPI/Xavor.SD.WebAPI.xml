@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xavor.SD.WebAPI</name>
+    </assembly>  
+    <members>
+        <member name="M:Xavor.SD.WebAPI.Controllers.AlarmsandWarningsController.GetAlarmsandWarnings">
+            <summary>
+            list of all alarms and warnings.
+            </summary>
+            <returns>return list of alarms and warnings.</returns>
+        </member>
+        <member name="M:Xavor.SD.WebAPI.Controllers.AuthorizationController.SignIn(Xavor.SD.WebAPI.ViewContracts.UserDTO)">
+            <summary>
+            signs in the user.
+            </summary>
+            <param name="user">user dto.</param>
+            <returns>returns user data.</returns>
+        </member>
+        <member name="M:Xavor.SD.WebAPI.Controllers.AuthorizationController.ResetPassword(Xavor.SD.WebAPI.ViewContracts.UserDTO)">
+            <summary>
+            resets the password.
+            </summary>
+            <param name="user">user dto.</param>
+            <returns>returns status.</returns>
+        </member>
+        <member name="M:Xavor.SD.WebAPI.Controllers.AuthorizationController.ForgotPassword(Xavor.SD.WebAPI.ViewContracts.UserDTO)">
+            <summary>
+            forgot password.
+            </summary>
+            <param name="user">user dto.</param>
+            <returns>returns status.</returns>
+        </member>
+    </members>
+</doc>
+

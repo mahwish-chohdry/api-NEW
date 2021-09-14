@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xavor.SD.Common\Xavor.SD.Common.csproj" />
+    <ProjectReference Include="..\Xavor.SD.Model\Xavor.SD.Model.csproj" />
+    <ProjectReference Include="..\Xavor.SD.Repository\Xavor.SD.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,75 @@
+//GetDevices/{customerId}/{AdminUserId}/{userId}
+//GetDevices/LG/mamir/john
+//Screen13
+//Screen14 - all devices of an operator with and all devices without permissions
+
+//Response
+{
+  "userId": "john@xavor.com", //operator user
+  "userName": "John Woo", //operator user
+  "deviceGroupList": [
+    {
+      "fullGroupAccess": false,
+      "groupId": "GUID",
+      "groupName": "Lab",
+      "deviceList": [
+        {
+          "deviceId": "Fan1",
+          "deviceName": "Fan 1",
+          "onBoard": true,
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan2",
+          "deviceName": "Fan 2",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan3",
+          "deviceName": "Fan 3",
+          "onBoard": true,
+          "hasPermission": true
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupId": "GUID",
+      "groupName": "Wrokshop",
+      "deviceList": [
+        {
+          "deviceId": "Fan4",
+          "deviceName": "Fan 4",
+          "onBoard": true,
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan5",
+          "deviceName": "Fan 5",
+          "onBoard": true,
+          "hasPermission": true
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": false,
+      "groupId": "GUID",
+      "groupName": "UNGROUPED",
+      "deviceList": [
+        {
+          "deviceId": "Fan6",
+          "deviceName": "Fan 6",
+          "onBoard": true,
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan7",
+          "deviceName": "Fan 7",
+          "onBoard": true,
+          "hasPermission": false
+        }
+      ]
+    }
+  ]
+}

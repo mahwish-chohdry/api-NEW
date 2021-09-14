@@ -1,0 +1,44 @@
+//GetDevices/{customerId}/{AdminUserId}/group/
+//GetDevices/LG/mamir/group/
+//Screen6
+
+//Response
+{
+  "userId": "mamir", //admin user
+  "deviceGroupList": [
+    {
+      "fullGroupAccess": true,
+      "groupId": "UNGROUPED",
+      "deviceList": [
+        {
+          "deviceId": "Fan6",
+          "deviceName": "Fan 6",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        },
+        {
+          "deviceId": "Fan7",
+          "deviceName": "Fan 7",
+          "onBoard": true,
+          "hasPermission": true,
+          "deviceStatus": {
+            "powerStatus": true,
+            "speed": 21,
+            "temperature": "42",
+            "humidity": "23",
+            "errors": "JSON STRING HERE",
+            "alarms": "JSON STRING HERE"
+          }
+        }
+      ]
+    }
+  ]
+}

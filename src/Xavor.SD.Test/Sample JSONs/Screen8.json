@@ -1,0 +1,52 @@
+//GetDevices/{customerId}/{AdminUserId}/group/{groupId}
+//GetDevices/LG/mamir/group/Lab
+//Screen8
+
+//Request
+{
+  "userId": "mamir", //admin user
+  "deviceGroupList": [
+    {
+      "fullGroupAccess": true,
+      "groupName": "Lab1",
+      "deviceList": [
+        {
+          "deviceId": "Fan1",
+          "deviceName": "Fan 1",
+          "onBoard": true,
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan2",
+          "deviceName": "Fan 2",
+          "onBoard": true,
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan3",
+          "deviceName": "Fan 3",
+          "onBoard": true,
+          "hasPermission": true
+        }
+      ]
+    },
+    {
+      "fullGroupAccess": true,
+      "groupName": "UNGROUPED",
+      "deviceList": [
+        {
+          "deviceId": "Fan6",
+          "deviceName": "Fan 6",
+          "onBoard": true,
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan7",
+          "deviceName": "Fan 7",
+          "onBoard": true,
+          "hasPermission": true
+        }
+      ]
+    }
+  ]
+}

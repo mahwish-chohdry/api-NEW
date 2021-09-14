@@ -1,0 +1,55 @@
+//SaveUserDevices/{customerId}/{AdminUserId}
+//SaveUserDevices/LG/mamir
+//Screen11
+//Screen14
+
+//Request
+{
+  "userId": "john@xavor.com", //operatorId user
+  "userName": "john", //operatorId user
+  "deviceGroupList": [
+    {
+      "groupId": "GUID", //"Lab1",
+      "deviceList": [
+        {
+          "deviceId": "Fan1",
+          "hasPermission": false
+        },
+        {
+          "deviceId": "Fan2",
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan3",
+          "hasPermission": true
+        }
+      ]
+    },
+    {
+      "groupId": "GUID", //"Wrokshop",
+      "deviceList": [
+        {
+          "deviceId": "Fan4",
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan5",
+          "hasPermission": true
+        }
+      ]
+    },
+    {
+      "groupId": "GUID", //"UNGROUPED",
+      "deviceList": [
+        {
+          "deviceId": "Fan6",
+          "hasPermission": true
+        },
+        {
+          "deviceId": "Fan7",
+          "hasPermission": true
+        }
+      ]
+    }
+  ]
+}
